@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1(99a+!tui6k3d-*=y&*r31fr%9pesbnt5h84j!*nl*csjyr7p'
+SECRET_KEY = 'django-insecure-3#)m@vl4y$-ejhu=m1bxwem!2ou9c6#_3d!6+ac^yh!uoybdf!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sinp_app'
 ]
 
 MIDDLEWARE = [
@@ -74,22 +73,13 @@ WSGI_APPLICATION = 'Sinp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-
-"""
-POSTGRESQL CONNECTION
-
-"""
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sinp_app',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',  
-        'PORT': '5432',  
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sinp_app'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'Sinp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tek_urun_tanitim_web',  # Database name
+        'USER': 'postgres',  # Database user
+        'PASSWORD': '12345',  # Database password
+        'HOST': 'localhost',  # Change if using a remote server
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 
